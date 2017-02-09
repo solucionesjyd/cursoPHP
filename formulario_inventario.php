@@ -1,4 +1,15 @@
 <?php include '../extend/header.php'; ?>
+
+<div class="row">
+  <div class="col s12">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">Ingreso de propiedad de: </span>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Datos generales -->
 <div class="row">
   <div class="col s12">
@@ -8,27 +19,28 @@
         <div class="row">
           <div class="col s6">
             <form  action="ins_propiedad.php" method="post" autocomplete="off" >
-
+              <input type="hidden" name="id_cliente" value="">
+              <input type="hidden" name="nombre_cliente" value="">
 
             <div class="input-field">
               <input type="number" name="precio"  id="precio" step='0.01' required  >
               <label for="precio">Precio</label>
             </div>
             <div class="input-field">
-              <input type="number" name="calle"  id="calle" required  >
-              <label for="calle">Calle y numero</label>
+              <input type="number" name="fraccionamiento"  id="fraccionamiento" required  >
+              <label for="fraccionamiento">Fraccionamiento</label>
             </div>
 
           </div> <!--Termina Primer columna -->
           <div class="col s6">
 
             <div class="input-field">
-              <input type="text" name="fracc"   id="fracc" onblur="may(this.value, this.id)" required  >
-              <label for="fracc">Fraccionamiento</label>
+              <input type="text" name="calle_num"   id="calle_num" onblur="may(this.value, this.id)" required  >
+              <label for="calle_num">Calle y numero</label>
             </div>
             <div class="input-field">
-              <input type="text" name="num_exterior"  id="num_exterior" required  >
-              <label for="num_exterior">Numero exterior</label>
+              <input type="text" name="num_int"  id="num_int" required  >
+              <label for="num_int">Numero interior</label>
             </div>
 
           </div><!-- TerminaSegunda columna -->
@@ -64,8 +76,8 @@
               <label for="plantas">Plantas</label>
             </div>
             <div class="input-field">
-              <textarea name="otros" rows="8" cols="80" id="otros" onblur="may(this.value, this.id)" class="materialize-textarea"></textarea>
-              <label for="otros">Otras caracteristicas</label>
+              <textarea name="caracteristicas" rows="8" cols="80" id="caracteristicas" onblur="may(this.value, this.id)" class="materialize-textarea"></textarea>
+              <label for="caracteristicas">Otras caracteristicas</label>
             </div>
 
           </div><!--Termina Primer columna -->
@@ -109,15 +121,15 @@
           <div class="col s6">
 
             <div class="input-field">
-              <input type="text" name="pago"  id="pago" onblur="may(this.value, this.id)" required pattern="[A-Z\s ]+"  >
-              <label for="pago">Forma de pago</label>
+              <input type="text" name="forma_pago"  id="forma_pago" onblur="may(this.value, this.id)" required pattern="[A-Z\s ]+"  >
+              <label for="forma_pago">Forma de pago</label>
             </div>
 
             <select class="" name="asesor">
               <!-- DATOS CON PHP -->
             </select>
 
-            <select name="tipo_in" required >
+            <select name="tipo_inmueble" required >
               <option value="" disabled selected  >ELIGE EL TIPO DE INMUEBLE</option>
               <option value="CASA">CASA</option>
               <option value="TERRENO">TERRENO</option>
@@ -130,13 +142,13 @@
           <div class="col s6">
 
             <div class="input-field">
-              <input type="date" class="datepicker" name="fecha_ini" id="fecha_ini" required ><!-- Se inicializa-->
-              <label for="fecha_ini">Fecha de inicio de promocion</label>
+              <input type="date" class="datepicker" name="fecha_registro" id="fecha_registro" required ><!-- Se inicializa-->
+              <label for="fecha_registro">Fecha de registro</label>
             </div>
 
             <div class="input-field">
-              <textarea name="comentario" rows="8" cols="80" id="comentario" onblur="may(this.value, this.id)" class="materialize-textarea"></textarea>
-              <label for="comentario">Comentario para los clientes</label>
+              <textarea name="comentario_web" rows="8" cols="80" id="comentario_web" onblur="may(this.value, this.id)" class="materialize-textarea"></textarea>
+              <label for="comentario_web">Comentario para los clientes en la web</label>
             </div>
 
             <select name="operacion" required >
