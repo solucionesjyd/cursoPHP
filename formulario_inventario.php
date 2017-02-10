@@ -39,7 +39,7 @@
               <label for="calle_num">Calle y numero</label>
             </div>
             <div class="input-field">
-              <input type="number" name="num_int"  id="num_int" required  >
+              <input type="number" name="num_int"  id="num_int"  >
               <label for="num_int">Numero interior</label>
             </div>
 
