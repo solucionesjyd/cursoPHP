@@ -27,7 +27,7 @@
               <label for="precio">Precio</label>
             </div>
             <div class="input-field">
-              <input type="text" name="fraccionamiento"  id="fraccionamiento" required  >
+              <input type="text" name="fraccionamiento"  id="fraccionamiento" required onblur="may(this.value, this.id)"  >
               <label for="fraccionamiento">Fraccionamiento</label>
             </div>
 
