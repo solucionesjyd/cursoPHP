@@ -39,8 +39,8 @@
               <label for="calle_num">Calle y numero</label>
             </div>
             <div class="input-field">
-              <input type="number" name="num_int"  id="num_int"  >
-              <label for="num_int">Numero interior</label>
+              <input type="number" name="numero_int"  id="numero_int"  >
+              <label for="numero_int">Numero interior</label>
             </div>
 
           </div><!-- TerminaSegunda columna -->
