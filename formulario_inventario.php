@@ -10,15 +10,15 @@
   </div>
 </div>
 
-<!-- Datos generales -->
 <div class="row">
   <div class="col s12">
     <div class="card">
       <div class="card-content">
-        <span class="card-title">Datos generales</span>
+        <h5 align="center"><b>DATOS GENERALES</b></h5>
+        <form  action="ins_propiedad.php" method="post" autocomplete="off" >
+          <!--AJAX AQUI -->
         <div class="row">
           <div class="col s6">
-            <form  action="ins_propiedad.php" method="post" autocomplete="off" >
               <input type="hidden" name="id_cliente" value="">
               <input type="hidden" name="nombre_cliente" value="">
 
@@ -27,7 +27,7 @@
               <label for="precio">Precio</label>
             </div>
             <div class="input-field">
-              <input type="text" name="fraccionamiento"  id="fraccionamiento" required onblur="may(this.value, this.id)"  >
+              <input type="text" name="fraccionamiento"  id="fraccionamiento" required onblur="may(this.value, this.id)" >
               <label for="fraccionamiento">Fraccionamiento</label>
             </div>
 
@@ -40,27 +40,15 @@
             </div>
             <div class="input-field">
               <input type="number" name="numero_int"  id="numero_int"  >
-              <label for="numero_int">Numero interior</label>
+              <label for="num_int">Numero interior</label>
             </div>
 
           </div><!-- TerminaSegunda columna -->
         </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 
-<!-- Caracteristicas -->
-
-<div class="row">
-  <div class="col s12">
-    <div class="card">
-      <div class="card-content">
-        <span class="card-title">Caracteristicas</span>
-
+        <h5 align="center"><b>CARACTERISTICAS</b></h5>
         <div class="row">
-
           <div class="col s6">
 
             <div class="input-field">
@@ -102,21 +90,10 @@
             </div>
 
           </div><!-- TerminaSegunda columna -->
-
         </div>
-      </div>
-    </div>
-  </div>
-</div>
 
-<!-- Datos de venta -->
 
-<div class="row">
-  <div class="col s12">
-    <div class="card">
-      <div class="card-content">
-        <span class="card-title">Datos de venta</span>
-
+        <h5 align="center"><b>DATOS DE VENTA</b></h5>
         <div class="row">
           <div class="col s6">
 
@@ -125,9 +102,10 @@
               <label for="forma_pago">Forma de pago</label>
             </div>
 
-            <select class="" name="asesor">
-              <!-- DATOS CON PHP -->
-            </select>
+
+              <select class="" name="asesor">
+                <!-- Se llena con PHP-->
+              </select>
 
             <select name="tipo_inmueble" required >
               <option value="" disabled selected  >ELIGE EL TIPO DE INMUEBLE</option>
@@ -142,7 +120,8 @@
           <div class="col s6">
 
             <div class="input-field">
-              <input type="date" class="datepicker" name="fecha_registro" id="fecha_registro" required ><!-- Se inicializa-->
+              <!-- Se inicializa-->
+              <input type="date" class="datepicker" name="fecha_registro" id="fecha_registro" required >
               <label for="fecha_registro">Fecha de registro</label>
             </div>
 
@@ -151,7 +130,7 @@
               <label for="comentario_web">Comentario para los clientes en la web</label>
             </div>
 
-            <select name="operacion" required >
+            <select name="operacion" required  >
               <option value="" disabled selected  >ELIGE LA OPERACION</option>
               <option value="VENTA">VENTA</option>
               <option value="RENTA">RENTA</option>
@@ -159,20 +138,11 @@
               <option value="OCUPADO">OCUPADO</option>
             </select>
 
-
           </div><!-- Termina Segunda columna -->
         </div>
-
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="row center">
-  <div class="col s12">
-    <div class="card">
-      <div class="card-content">
+        <center>
         <button type="submit" class="btn">Guardar</button>
+        </center>
         </form>
       </div>
     </div>
@@ -180,6 +150,5 @@
 </div>
 
 <?php include '../extend/scripts.php'; ?>
-
 </body>
 </html>
