@@ -27,7 +27,7 @@
               <label for="precio">Precio</label>
             </div>
             <div class="input-field">
-              <input type="number" name="fraccionamiento"  id="fraccionamiento" required  >
+              <input type="text" name="fraccionamiento"  id="fraccionamiento" required  >
               <label for="fraccionamiento">Fraccionamiento</label>
             </div>
 
@@ -39,7 +39,7 @@
               <label for="calle_num">Calle y numero</label>
             </div>
             <div class="input-field">
-              <input type="text" name="num_int"  id="num_int" required  >
+              <input type="number" name="num_int"  id="num_int" required  >
               <label for="num_int">Numero interior</label>
             </div>
 
