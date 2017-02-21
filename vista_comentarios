@@ -1,0 +1,22 @@
+<table>
+           <th>Vista</th>
+           <th>Solicitante</th>
+           <th>Telefono</th>
+           <th>Correo</th>
+           <th>Mensaje</th>
+           <?php
+           $sel_com = $con->prepare("SELECT * FROM comentario WHERE estatus = ? ");
+           $sel_com->bind_param('s', $estatus);
+           $estatus = 'NUEVO';
+           $sel_com->execute();
+           $res_nuevo = $sel_com->get_result();
+           while ($fn =$res_nuevo->fetch_assoc()) { ?>
+           <tr>
+             <td><?php echo $fn['id_propiedad'] ?></td>
+             <td><?php echo $fn['nombre'] ?></td>
+             <td><?php echo $fn['tel'] ?></td>
+             <td><?php echo $fn['correo'] ?></td>
+             <td><?php echo $fn['mensaje'] ?></td>
+           </tr>
+           <?php } ?>
+         </table>
