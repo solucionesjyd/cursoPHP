@@ -93,7 +93,6 @@ if ($f =$res->fetch_assoc()) {
                <!-- MAPA AQUI -->
              </div>
              <div class="col s6">
-               <form  action="comentario.php" method="post">
                  <div class="input-field">
                    <input type="text" name="nombre" pattern="[A-Za-z/s ]+"  title=""  id="nombre" required >
                    <label for="nombre">Nombre:</label>
@@ -107,12 +106,11 @@ if ($f =$res->fetch_assoc()) {
                    <label for="correo">Correo:</label>
                  </div>
                  <div class="input-field">
-                   <textarea name="mensaje" rows="8" cols="80" id="" onblur="may(this.value, this.id)" class="materialize-textarea"></textarea>
+                   <textarea name="mensaje" rows="8" cols="80" id="mensaje" onblur="may(this.value, this.id)" class="materialize-textarea"></textarea>
                    <label for="">Mensaje:</label>
-                   <input type="hidden" name="id_propiedad" value="<?php echo $id ?>">
+                   <input type="hidden" name="id_propiedad" id="id_propiedad" value="<?php echo $id ?>">
                  </div>
-                 <button type="submit" class="btn">Enviar</button>
-               </form>
+                 <button type="button" class="btn">Enviar</button>
              </div>
            </div>
          </div>
