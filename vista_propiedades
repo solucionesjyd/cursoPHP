@@ -7,16 +7,18 @@
         <span class="card-title">Propiedades</span>
         <table>
           <thead>
-            <th>Vista</th>
-            <th>Num</th>
-            <th>Cliente</th>
-            <th>Propiedad</th>
-            <th>Precio</th>
-            <th>Credito</th>
-            <th>Asesor</th>
-            <th>Tipo</th>
-            <th>Operacion</th>
-            <th>Opciones</th>
+            <tr class="cabecera">
+              <th>Vista</th>
+              <th>Num</th>
+              <th>Cliente</th>
+              <th>Propiedad</th>
+              <th>Precio</th>
+              <th>Credito</th>
+              <th>Asesor</th>
+              <th>Tipo</th>
+              <th>Operacion</th>
+              <th>Opciones</th>
+            </tr>
           </thead>
           <?php
           $sel = $con->prepare("SELECT consecutivo,nombre_cliente,calle_num,fraccionamiento,estado,municipio,precio,forma_pago,asesor,tipo_inmueble,operacion FROM inventario WHERE estatus = 'ACTIVO' ");
