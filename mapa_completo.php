@@ -11,7 +11,7 @@
       var marcadores = [
 
         ['ubicacion uno', latitud, -longitud],
-        ['ubicacion dos', latitud, -longitud
+        ['ubicacion dos', latitud, -longitud]
 
       ];
       var map = new google.maps.Map(document.getElementById('mapa'), {
